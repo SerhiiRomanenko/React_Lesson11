@@ -1,0 +1,30 @@
+.home {
+  text-align: center;
+}
+.home__img {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+.home__whyAlwaysUs {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.home__statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 670px;
+  margin: 0 auto;
+}
+.home__statisticNumber {
+  color: #00A046;
+  font-size: 43px;
+  font-weight: bold;
+  margin: 20px;
+}
+.home__statisticDescription {
+  color: #7983AC;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=Home.css.map */

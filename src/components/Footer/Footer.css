@@ -1,0 +1,20 @@
+.footer {
+  background: #221F1F;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.footer__company {
+  color: #5E5D66;
+  margin: 5px;
+}
+.footer__terms {
+  color: #B4B7BB;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=Footer.css.map */

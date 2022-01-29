@@ -1,0 +1,25 @@
+.about {
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+.about__title {
+  font-size: 34px;
+  text-decoration: underline;
+}
+.about__table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about__line {
+  margin-right: 10px;
+  display: inline-block;
+}
+.about__about__link {
+  display: inline;
+  padding-left: 10px;
+}
+.about__subTitle {
+  color: #BCBBCD;
+}
+
+/*# sourceMappingURL=About.css.map */
