@@ -2,8 +2,8 @@ import React from 'react';
 
 export function Cart() {
   return (
-    <div>
+    <main>
       This page is under construction ;)
-    </div>
+    </main>
   );
 }

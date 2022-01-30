@@ -6,10 +6,27 @@
   position: relative;
   display: flex;
 
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
+
+  &__backHome {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 860px) {
+      //margin-bottom: 20px;
+      margin: 0 auto;
+    }
+  }
+
   &__menu {
     display: flex;
     margin-left: auto;
 
+    @media (max-width: 860px) {
+      margin: 0 auto;
+    }
   }
 
   &__photo {
@@ -17,6 +34,10 @@
     height: 70px;
     margin-right: 30px;
     display: block;
+
+    @media (max-width: 860px) {
+      display: inline;
+    }
   }
 
   &__title {

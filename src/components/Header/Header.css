@@ -6,15 +6,39 @@
   position: relative;
   display: flex;
 }
+@media (max-width: 860px) {
+  .header {
+    flex-direction: column;
+  }
+}
+.header__backHome {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 860px) {
+  .header__backHome {
+    margin: 0 auto;
+  }
+}
 .header__menu {
   display: flex;
   margin-left: auto;
+}
+@media (max-width: 860px) {
+  .header__menu {
+    margin: 0 auto;
+  }
 }
 .header__photo {
   width: 70px;
   height: 70px;
   margin-right: 30px;
   display: block;
+}
+@media (max-width: 860px) {
+  .header__photo {
+    display: inline;
+  }
 }
 .header__title {
   font-size: 40px;

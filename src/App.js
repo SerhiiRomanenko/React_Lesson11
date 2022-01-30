@@ -1,5 +1,5 @@
 import React from 'react';
-import "./services/reset.scss";
+import "./assets/reset.scss";
 import {Header} from "./components/Header";
 import {Main} from "./components/Main";
 import {Footer} from "./components/Footer";

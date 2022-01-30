@@ -1,5 +1,5 @@
 import React from "react";
-import homePic from "../../images/Pictures/homePic.gif";
+import homePic from "../../assets/images/Pictures/homePic.gif";
 import "./Home.scss";
 
 export function Home() {

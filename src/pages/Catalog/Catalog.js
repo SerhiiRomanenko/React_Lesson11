@@ -1,7 +1,7 @@
 import React from "react";
 
 export function Catalog() {
-  return <div>
+  return <main>
     This page is under construction ;)
-  </div>
+  </main>
 }

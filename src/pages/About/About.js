@@ -1,6 +1,5 @@
-import aboutPic from "../../images/Pictures/about_pic.png";
+import aboutPic from "../../assets/images/Pictures/about_pic.png";
 import React from "react";
-import { Link } from "react-router-dom";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import "./About.scss";
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -16,7 +15,7 @@ export function About() {
     lng: 30.823
   };
   return (
-    <div className="about">
+    <main className="about">
       <div className="about__background" style={{ height: "350px", background: `url(${aboutPic}) no-repeat center center`}}>
       </div>
 
@@ -53,6 +52,6 @@ export function About() {
         >
         </GoogleMap>
       </LoadScript>
-    </div>
+    </main>
   );
 }
