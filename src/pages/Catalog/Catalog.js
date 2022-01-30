@@ -2,12 +2,17 @@ import React, {useEffect, useState} from "react";
 
 export function Catalog() {
   const [data, setData] = useState(null);
-  const [status, setStatus] = useState("initial");
   const [error, setError] = useState(null);
+  const [status, setStatus] = useState("initial");
 
   useEffect(() => {
     fetch("https://61f5558a62f1e300173c40f3.mockapi.io/products")
-      .then(response => response.json())
+      .then(response => {
+        setData(null);
+        setError(null);
+        setStatus("loading");
+        return response.json();
+      })
       .then(date => {
         setData(date);
         setError(null);
