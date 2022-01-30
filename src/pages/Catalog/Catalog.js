@@ -10,15 +10,23 @@ export function Catalog() {
       .then(response => response.json())
       .then(date => {
         setData(date);
+        setError(null);
+        setStatus("success")
       })
       .catch((err) => {
-        console.error('Error:', err);
+        setData(null);
+        setError(err);
+        setStatus("error");
       });
   },[]);
   console.log(data)
 
   return <main>
-    {data !== null ?
+    {status === "initial" || status === 'loading' ?
+      <h2>
+        Loading...
+      </h2>
+       :
       data.map((product) => {
         return <div key={product.id}>
           <h2>{product.title}</h2>
@@ -28,7 +36,6 @@ export function Catalog() {
           <p>{product.photo}</p>
         </div>
       })
-       : <h2>Empty</h2>
     }
   </main>
 }
