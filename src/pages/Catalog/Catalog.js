@@ -47,7 +47,7 @@ export function Catalog() {
             <CardMedia
               component="img"
               height="140"
-              image={product.photo}
+              image={product.photo + `?v=${product.id}`}
               alt={product.title}
             />
             <CardContent>
