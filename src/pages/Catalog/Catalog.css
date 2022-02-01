@@ -18,4 +18,9 @@
   }
 }
 
+.product:hover {
+  border: 1px solid darkgreen;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=Catalog.css.map */
