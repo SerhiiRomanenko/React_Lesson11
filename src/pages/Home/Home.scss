@@ -1,4 +1,4 @@
-.home{
+.home {
   text-align: center;
 
   &__img {
@@ -21,7 +21,7 @@
 
 
   &__statisticNumber {
-    color: #00A046;
+    //color: #00A046;
     font-size: 43px;
     font-weight: bold;
     margin: 20px;
@@ -29,7 +29,7 @@
 
   &__img {
     @media (max-width: 1024px) {
-    max-width: 700px;
+      max-width: 700px;
     }
     @media (max-width: 768px) {
       max-width: 400px;
@@ -37,7 +37,7 @@
   }
 
   &__statisticDescription {
-    color: #7983AC;
+    //color: #7983AC;
     font-size: 20px;
   }
 }

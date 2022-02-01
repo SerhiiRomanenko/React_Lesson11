@@ -17,7 +17,6 @@
   margin: 0 auto;
 }
 .home__statisticNumber {
-  color: #00A046;
   font-size: 43px;
   font-weight: bold;
   margin: 20px;
@@ -33,7 +32,6 @@
   }
 }
 .home__statisticDescription {
-  color: #7983AC;
   font-size: 20px;
 }
 

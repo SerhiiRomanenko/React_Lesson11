@@ -3,17 +3,12 @@
 }
 .delivery__title {
   text-align: center;
-  color: black;
   text-decoration: underline;
   font-size: 34px;
-}
-.delivery__subTitle {
-  color: black;
 }
 .delivery__titleOfCategory {
   display: inline-block;
   margin-left: 10px;
-  color: black;
 }
 
 /*# sourceMappingURL=Delivery.css.map */

@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from "react";
 import "./Catalog.scss";
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import {
+  CircularProgress,
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  Button,
+  Typography,
+  CardMedia,
+  Rating,
+  Badge
+} from '@mui/material';
+import FiberNewIcon from '@mui/icons-material/FiberNew';
 
 export function Catalog() {
   const [data, setData] = useState(null);
@@ -37,13 +42,13 @@ export function Catalog() {
 
   return <main className="catalog">
     {status === "initial" || status === 'loading' ?
-      <Box sx={{display: 'flex'}}>
+      <Box sx={{display: 'flex', paddingTop: "25vh"}}>
         <CircularProgress sx={{margin: '0 auto', color: 'green'}}/>
       </Box>
       :
       <div className="catalog__list">
         {data.map((product) => {
-          return <Card className="product" key={product.id} sx={{maxWidth: 345}}>
+          return <Card className="product" key={product.id} sx={{maxWidth: 300, margin: "0 auto", textAlign: "center"}}>
             <CardMedia
               component="img"
               height="140"
@@ -57,21 +62,18 @@ export function Catalog() {
               <Typography className="product__description" variant="body2" color="text.secondary">
                 {product.description}
               </Typography>
+              <Typography className="product__price" variant="body2" color="text.secondary">
+                <b>{product.price + " USD"}</b>
+              </Typography>
+              <Rating className="product__rating" name="half-rating" defaultValue={Math.ceil(product.rating / 20)}
+                      precision={0.5}/><br/>
+              {product.isNew === true && <FiberNewIcon sx={{color: "red"}}/>}
             </CardContent>
             <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
+              <Button size="small" sx={{margin: "0 auto"}}>В корзину</Button>
             </CardActions>
           </Card>
 
-
-          // <div className="catalog__item" key={product.id}>
-          //   <h2>{product.title}</h2>
-          //   <p>{product.price}</p>
-          //   <p>{product.description}</p>
-          //   <p>{product.rating}</p>
-          //   <p>{product.photo}</p>
-          // </div>
         })
         }
       </div>

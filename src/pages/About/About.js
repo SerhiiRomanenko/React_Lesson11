@@ -1,7 +1,8 @@
 import aboutPic from "../../assets/images/Pictures/about_pic.png";
 import React from "react";
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import {GoogleMap, LoadScript} from '@react-google-maps/api';
 import "./About.scss";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export function About() {
@@ -16,7 +17,8 @@ export function About() {
   };
   return (
     <main className="about">
-      <div className="about__background" style={{ height: "350px", background: `url(${aboutPic}) no-repeat center center`}}>
+      <div className="about__background"
+           style={{height: "350px", background: `url(${aboutPic}) no-repeat center center`}}>
       </div>
 
       <h2 className="about__title">Про нас: </h2>
@@ -35,15 +37,17 @@ export function About() {
 
         <div className="about__row">
           <h3>АДМІНІСТРАЦІЯ</h3>
-          <p className="about__line">Сергій РОМАНЕНКО</p><a className="about__link" href="tel:8665562570">+3(096)5562570</a><br/>
-          <p className="about__line">Ілля ПОМАЗКІН</p><a className="about__link" href="tel:8665562571">+3(096)5562571</a><br/>
-          <p className="about__line">Павло ДРУМОВ</p><a className="about__link" href="tel:8665562572">+3(096)5562572</a><br/>
+          <p className="about__line">Сергій РОМАНЕНКО</p><a className="about__link"
+                                                            href="tel:8665562570">+3(096)5562570</a><br/>
+          <p className="about__line">Ілля ПОМАЗКІН</p><a className="about__link"
+                                                         href="tel:8665562571">+3(096)5562571</a><br/>
+          <p className="about__line">Вадим ДРУМОВ</p><a className="about__link" href="tel:8665562572">+3(096)5562572</a><br/>
           <p className="about__line">Ілон МАСК</p><a className="about__link" href="tel:8665562573">+3(096)5562573</a>
         </div>
       </div>
 
       <LoadScript
-        googleMapsApiKey ={API_KEY}
+        googleMapsApiKey={API_KEY}
       >
         <GoogleMap
           mapContainerStyle={containerStyle}

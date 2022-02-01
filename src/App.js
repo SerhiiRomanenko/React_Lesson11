@@ -5,6 +5,7 @@ import {Main} from "./components/Main";
 import {Footer} from "./components/Footer";
 
 export function App() {
+
   return (
     <div className="app">
       <Header/>
