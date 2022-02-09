@@ -19,7 +19,15 @@ import "./Item.scss";
 export function Item({product}) {
 
   return <Card className="product"
-               sx={{maxWidth: 300, margin: "0 auto", textAlign: "center", position: 'relative'}} onClick={console.log}>
+               sx={{
+                 maxWidth: 300,
+                 margin: "0 auto",
+                 textAlign: "center",
+                 position: 'relative',
+                 display: 'flex',
+                 flexDirection: 'column',
+                 justifyContent: 'space-between'
+               }} onClick={console.log}>
     <CardMedia
       className="product__image"
       component="img"
@@ -48,7 +56,7 @@ export function Item({product}) {
                color="primary"> </Badge>
       }
     </CardContent>
-    <CardActions className="product__actions" sx={{display: "grid", gridTemplateColumns: "1fr 1fr"}}>
+    <CardActions className="product__actions" sx={{display: "grid", gridTemplateColumns: "auto auto"}}>
       <Link to={`/products/${product.id}`}>
         <Button className="product__details" variant="contained" size="small"
                 sx={{color: 'white', position: 'relative', paddingRight: "27px"}}>
@@ -63,7 +71,7 @@ export function Item({product}) {
         <span>B корзину</span>
         <ShoppingCartIcon className="product__addToCardIcon"
                           sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
-      </Button><br/>
+      </Button>
     </CardActions>
 
     {/* DELETE STRING BEYOND */}
