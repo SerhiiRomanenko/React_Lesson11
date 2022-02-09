@@ -52,7 +52,7 @@ export function ItemPage() {
     ) : status === "success" ? (
       <>
         {product.isSale === true &&
-          <Badge className="itemPage__isSale" badgeContent={"Роспродаж"}
+          <Badge className="itemPage__isSale" badgeContent={"Розпродаж"}
                  color="primary"> </Badge>
         }
         {product.isNew === true &&

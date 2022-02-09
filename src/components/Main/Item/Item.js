@@ -35,7 +35,7 @@ export function Item({product}) {
       image={product.photo + `?v=${product.id}`}
       alt={product.title}
     />
-    <CardContent>
+    <CardContent sx={{paddingBottom: '0px'}}>
       <Typography className="product__title" gutterBottom variant="h5" component="div">
         {product.title}
       </Typography>
@@ -52,7 +52,7 @@ export function Item({product}) {
       }
       {product.isSale === true &&
         <Badge className="product__isSale" sx={{position: 'absolute', top: "13px", left: "45px"}}
-               badgeContent={"Распродажа"}
+               badgeContent={"Розпродаж"}
                color="primary"> </Badge>
       }
     </CardContent>

@@ -13,7 +13,7 @@ import {
   MenuItem,
   Select,
 } from '@mui/material';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import {useNavigate} from 'react-router-dom';
 
@@ -147,8 +147,8 @@ export function OrderStep1() {
               type="submit"
               sx={{color: 'white', position: 'relative', paddingRight: "27px"}}>
         <span>Продолжить</span>
-        <NavigateNextIcon className="product__addToCardIcon"
-                          sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
+        <ArrowForwardIosIcon className="product__addToCardIcon"
+                             sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
       </Button>
 
       <Button className="order__goBack"
