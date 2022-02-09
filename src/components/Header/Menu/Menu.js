@@ -4,13 +4,12 @@ import InfoIcon from "@mui/icons-material/Info";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ListIcon from "@mui/icons-material/List";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import {Switch} from "@mui/material";
-import {theme} from "../../../services/theme";
+import {Switch, Badge} from "@mui/material";
+
+// import {theme} from "../../../services/theme";
 
 export function Menu() {
   const [lightMode, setLightMode] = useState(true);
-  console.log(lightMode);
-  console.log(theme.palette.mode);
   return <ul className="header__menu">
     <li>
       <nav style={{marginRight: '20px'}}>
@@ -44,7 +43,7 @@ export function Menu() {
 
     <li>
       <nav style={{marginRight: '20px'}}>
-        <Link to="/catalog">
+        <Link to="/products">
           <ListIcon fontSize="large" sx={{
             display: "flex",
             flexDirection: 'row',
@@ -59,16 +58,18 @@ export function Menu() {
 
     <li>
       <nav style={{marginRight: '20px'}}>
-        <Link to="/cart">
-          <ShoppingBasketIcon fontSize="large" sx={{
-            display: "flex",
-            flexDirection: 'row',
-            color: "white",
-            marginLeft: "auto",
-            marginRight: "auto"
-          }}/>
-          <span style={{color: "white"}}>Корзина</span>
-        </Link>
+        <Badge badgeContent={1} color="primary">
+          <Link to="/cart">
+            <ShoppingBasketIcon fontSize="large" sx={{
+              display: "flex",
+              flexDirection: 'row',
+              color: "white",
+              marginLeft: "auto",
+              marginRight: "auto"
+            }}/>
+            <span style={{color: "white"}}>Корзина</span>
+          </Link>
+        </Badge>
       </nav>
     </li>
     <Switch checked={lightMode} onChange={() => setLightMode(!lightMode)}/>

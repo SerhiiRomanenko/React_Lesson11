@@ -1,0 +1,31 @@
+.order {
+  min-height: calc(100vh - 199px);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.order__title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 34px;
+}
+.order__form {
+  display: grid;
+  max-width: 350px;
+  margin: 0 auto;
+  grid-gap: 15px;
+}
+.order__nameInput {
+  display: block;
+}
+.order__deliveryType {
+  justify-self: center;
+}
+.order__dontCallMeInput {
+  justify-self: center;
+}
+
+/*# sourceMappingURL=OrderStep1.css.map */

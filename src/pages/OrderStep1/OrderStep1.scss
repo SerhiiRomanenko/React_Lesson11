@@ -1,0 +1,35 @@
+.order {
+  min-height: calc(100vh - 199px);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 34px;
+  }
+
+  &__form {
+    display: grid;
+    max-width: 350px;
+    margin: 0 auto;
+    grid-gap: 15px;
+  }
+
+  &__nameInput {
+    display: block;
+  }
+
+  &__deliveryType {
+    justify-self: center;
+  }
+
+  &__dontCallMeInput {
+    justify-self: center;
+  }
+
+}

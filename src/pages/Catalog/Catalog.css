@@ -1,5 +1,9 @@
 .catalog {
-  min-height: calc(100vh - 260px);
+  min-height: calc(100vh - 199px);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 .catalog__list {
   display: grid;
@@ -17,10 +21,11 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
-.product:hover {
-  border: 1px solid darkgreen;
-  cursor: pointer;
+.catalog__error {
+  color: red;
+  font-weight: bold;
+  padding-top: 17vh;
+  text-align: center;
 }
 
 /*# sourceMappingURL=Catalog.css.map */
