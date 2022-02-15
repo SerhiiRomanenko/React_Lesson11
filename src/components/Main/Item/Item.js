@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import {Link} from "react-router-dom";
 import InfoIcon from '@mui/icons-material/Info';
-import FiberNewIcon from "@mui/icons-material/FiberNew";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import "./Item.scss";
@@ -35,7 +34,7 @@ export function Item({product}) {
       image={product.photo + `?v=${product.id}`}
       alt={product.title}
     />
-    <CardContent sx={{paddingBottom: '0px'}}>
+    <CardContent sx={{paddingBottom: '0'}}>
       <Typography className="product__title" gutterBottom variant="h5" component="div">
         {product.title}
       </Typography>
@@ -48,12 +47,14 @@ export function Item({product}) {
       <Rating className="product__rating" name="half-rating" defaultValue={Math.ceil(product.rating / 20)}
               precision={0.5}/><br/>
       {product.isNew === true &&
-        <FiberNewIcon className="product__isNew" sx={{color: "red"}}/>
+        <Badge className="product__isNew" sx={{position: 'absolute', top: "13px", right: "35px"}}
+               badgeContent={"Новинка"}
+               color="error"> </Badge>
       }
       {product.isSale === true &&
         <Badge className="product__isSale" sx={{position: 'absolute', top: "13px", left: "45px"}}
                badgeContent={"Розпродаж"}
-               color="primary"> </Badge>
+               color="info"> </Badge>
       }
     </CardContent>
     <CardActions className="product__actions" sx={{display: "grid", gridTemplateColumns: "auto auto"}}>
@@ -74,19 +75,5 @@ export function Item({product}) {
       </Button>
     </CardActions>
 
-    {/* DELETE STRING BEYOND */}
-
-    {/*<Link to={`/order-1`}>*/}
-    {/*  <Button className="product__details" variant="contained" size="small"*/}
-    {/*          sx={{margin: "0 auto", color: 'white', position: 'relative', paddingRight: "27px"}}>*/}
-    {/*    <span>Order-1</span>*/}
-    {/*  </Button>*/}
-    {/*</Link>*/}
-    {/*<Link to={`/order-2`}>*/}
-    {/*  <Button className="product__details" variant="contained" size="small"*/}
-    {/*          sx={{margin: "0 auto", color: 'white', position: 'relative', paddingRight: "27px"}}>*/}
-    {/*    <span>Order-2</span>*/}
-    {/*  </Button>*/}
-    {/*</Link>*/}
   </Card>
 }

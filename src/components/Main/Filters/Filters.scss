@@ -1,6 +1,10 @@
 .filters {
   text-align: center;
+  box-shadow: 10px 0px 5px 0px rgba(49, 138, 117, 0.75);
+  -webkit-box-shadow: 10px 0px 5px 0px rgba(49, 138, 117, 0.75);
+  -moz-box-shadow: 10px 0px 5px 0px rgba(49, 138, 117, 0.75);
 
   &__title {
+    text-decoration: underline;
   }
 }

@@ -5,6 +5,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ListIcon from "@mui/icons-material/List";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import {Switch, Badge} from "@mui/material";
+import FilterFramesIcon from '@mui/icons-material/FilterFrames';
 
 // import {theme} from "../../../services/theme";
 

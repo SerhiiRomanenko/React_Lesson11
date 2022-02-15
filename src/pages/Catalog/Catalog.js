@@ -43,17 +43,17 @@ export function Catalog() {
       <Box sx={{display: 'flex', paddingTop: "25vh"}}>
         <CircularProgress sx={{margin: '0 auto', color: 'green'}}/>
       </Box>
-    ) : status === "success" ? (
+    ) : status !== "success" ? (
+      <Typography className="catalog__error" variant="h3" component="h3">
+        {error}
+      </Typography>
+    ) : (
       <div className="catalog__list">
         {data.map((product) => {
           return <Item key={product.id} product={product}/>
         })
         }
       </div>
-    ) : (
-      <Typography className="catalog__error" variant="h3" component="h3">
-        {error}
-      </Typography>
     )}
 
   </main>

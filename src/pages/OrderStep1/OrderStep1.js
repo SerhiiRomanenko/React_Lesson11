@@ -16,6 +16,7 @@ import {
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import {useNavigate} from 'react-router-dom';
+import {Link} from "react-router-dom";
 
 export function OrderStep1() {
 
@@ -141,24 +142,25 @@ export function OrderStep1() {
         erorText="Please enter only 500 digits number"
       />
 
-      <Button className="order__submitButton"
-              variant="contained"
-              size="small"
-              type="submit"
-              sx={{color: 'white', position: 'relative', paddingRight: "27px"}}>
-        <span>Продолжить</span>
-        <ArrowForwardIosIcon className="product__addToCardIcon"
-                             sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
-      </Button>
+      <Link to='/order-2'>
+        <Button className="order__submitButton"
+                variant="contained"
+                size="small"
+                type="submit"
+                sx={{color: 'white', position: 'relative', paddingRight: "27px", width: '100%'}}>
+          <span>Продовжити</span>
+          <ArrowForwardIosIcon className="order__submitIcon"
+                               sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
+        </Button>
+      </Link>
 
       <Button className="order__goBack"
               onClick={() => navigate(-1)}
               variant="contained"
               size="small"
-              type="submit"
               sx={{color: 'white', position: 'relative', paddingRight: "27px"}}>
         <span>Назад</span>
-        <ArrowBackIosNewIcon className="product__addToCardIcon"
+        <ArrowBackIosNewIcon className="order__goBackIcon"
                              sx={{position: 'absolute', top: '1px', right: 0, paddingRight: "2px"}}/>
       </Button>
 

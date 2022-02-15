@@ -1,3 +1,17 @@
-
+.order-3 {
+  min-height: calc(100vh - 199px);
+  text-align: center;
+  padding-top: 30px;
+}
+.order-3__donePicture {
+  width: 120px;
+  margin-bottom: 30px;
+}
+.order-3__title {
+  margin-bottom: 30px;
+}
+.order-3__description {
+  margin-bottom: 70px;
+}
 
 /*# sourceMappingURL=OrderStep3.css.map */

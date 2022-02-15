@@ -53,10 +53,13 @@ export function ItemPage() {
       <>
         {product.isSale === true &&
           <Badge className="itemPage__isSale" badgeContent={"Розпродаж"}
-                 color="primary"> </Badge>
+                 color="info"> </Badge>
         }
         {product.isNew === true &&
-          <FiberNewIcon className="itemPage__isNew" sx={{color: "red"}}/>
+          <Badge className="itemPage__isNew" sx={{position: 'absolute', top: "33px", right: "38px"}}
+                 badgeContent={"Новинка"}
+                 color="error"> </Badge>
+          // <FiberNewIcon className="itemPage__isNew" sx={{color: "red"}}/>
         }
         <Typography className="itemPage__title" gutterBottom variant="h5" component="div">
           {product.title}
